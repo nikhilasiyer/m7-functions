@@ -1,0 +1,26 @@
+m7-functions, exercise 2 -- Nikhila Iyer INFO201 Section AE
+# Exercise 2: writing and executing functions (II)
+
+# Write a function `CompareLength` that takes in 2 vectors, and returns the sentence:
+# "The difference in lengths is N"
+CompareLength <- function(a, b) {
+  paste("The difference in lengths is", abs(a - b))
+}
+
+# Pass two vectors of different length to your `CompareLength` function
+CompareLength(2, 7)
+
+# Write a function `DescribeDifference` that will return one of the following statements:
+# "Your first vector is longer by N elements"
+# "Your second vector is longer by N elements"
+DescribeDifference <- function(v1, v2) {
+  diff <- abs(length(v1) - length(v2))
+  if (length(v1) > length(v2)) {
+    paste("Your first vector is longer by ", diff, " elements")
+  } else {
+    paste("Your second vector is longer by ", diff, " elements")
+  }
+}
+
+# Pass two vectors to your `DescribeDifference` function
+DescribeDifference(c('cookies', 'candy', 'ice cream', 'cake'), c('carrot', 'broccoli'))
